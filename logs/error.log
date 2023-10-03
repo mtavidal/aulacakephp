@@ -1,0 +1,84 @@
+2023-10-03 14:39:23 Error: [Cake\Controller\Exception\MissingActionException] Action MeuTesteController::1() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'MeuTesteController',
+  'action' => '1',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /meu-teste/1
+Stack Trace:
+#0 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MeuTesteController))
+#2 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Users\Administrador\Documents\Manuela\aulacakephp\webroot\index.php(40): Cake\Http\Server->run()
+#17 {main}
+
+
+2023-10-03 14:39:46 Error: [Cake\Controller\Exception\MissingActionException] Action MeuTesteController::1() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'MeuTesteController',
+  'action' => '1',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /meu-teste/1
+Stack Trace:
+#0 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MeuTesteController))
+#2 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Users\Administrador\Documents\Manuela\aulacakephp\webroot\index.php(40): Cake\Http\Server->run()
+#17 {main}
+
+
+2023-10-03 14:43:27 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "shippers"
+Request URL: /meu-teste/view/4
+Stack Trace:
+#0 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(1613): Cake\ORM\Query->firstOrFail()
+#1 C:\Users\Administrador\Documents\Manuela\aulacakephp\src\Controller\MeuTesteController.php(34): Cake\ORM\Table->get('4')
+#2 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\MeuTesteController->view('4')
+#3 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#4 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\MeuTesteController))
+#5 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Users\Administrador\Documents\Manuela\aulacakephp\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+
+
