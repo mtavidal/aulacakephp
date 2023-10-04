@@ -51,7 +51,7 @@ class CustomersTable extends Table
         $validator
             ->scalar('CustomerName')
             ->maxLength('CustomerName', 255)
-            ->allowEmpty('CustomerName');
+            ->minLength('CustomerName', 3, __('Tamanho mínimo do nome são 3 caracteres.'));
 
         $validator
             ->scalar('ContactName')
