@@ -73,6 +73,7 @@ class UserController extends AppController
         $user = $this->User->get($id, [
             'contain' => []
         ]);
+        $user->unsetProperty('password');
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->User->patchEntity($user, $this->request->getData());
             if ($this->User->save($user)) {
@@ -103,5 +104,26 @@ class UserController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+    public function login()
+    {
+        if($this->request->is('post')){
+            $dados = $this->request->getData();
+            $user = $this->User->find('all')
+                ->where(['email' => $dados['email']])
+                ->where(['password' => \Cake\Utility\Security::hash($dados['password'], 'sha256')])
+                ->first();
+            if($user){
+                $this->Auth->setUser($user);
+                return $this->redirect('/user/index');
+            } else {
+                $this->Flash->error('Email e senha inválidos');
+            }
+        }
+
+    }
+    public function logout()
+    {
+        return $this->redirect($this->Auth->logout());
     }
 }

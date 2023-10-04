@@ -60,8 +60,9 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
     $routes->connect('/entregador', ['controller' => 'shippers', 'action' => 'index']);
     $routes->connect('/entregador/:action/*', ['controller' => 'shippers']);
-    $routes->redirect('google', 'http://google.com');
-
+    $routes->redirect('/google', 'http://google.com');
+    $routes->connect('/login', ['controller' => 'user', 'action' => 'login']);
+    $routes->connect('/logout', ['controller' => 'user', 'action' => 'logout']);
     /**
      * Connect catchall routes for all controllers.
      *

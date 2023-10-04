@@ -79,4 +79,9 @@ class UserTable extends Table
 
         return $rules;
     }
+    public function beforeSave(\Cake\Event\Event $event, \App\Model\Entity\User $entity)
+    {
+        $entity->password = \Cake\Utility\Security::hash($entity->password, 'sha256');
+
+    }
 }
