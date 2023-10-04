@@ -84,8 +84,5 @@ class SuppliersTable extends Table
             ->allowEmpty('Phone');
 
         return $validator;
-    // }
-    // public function buildRules(RulesChecker $rules) {
-    //     parent::buildRules($rules);
     }
 }
