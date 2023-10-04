@@ -58,6 +58,9 @@ Router::scope('/', function (RouteBuilder $routes) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    $routes->connect('/entregador', ['controller' => 'shippers', 'action' => 'index']);
+    $routes->connect('/entregador/:action/*', ['controller' => 'shippers']);
+    $routes->redirect('google', 'http://google.com');
 
     /**
      * Connect catchall routes for all controllers.
@@ -75,5 +78,12 @@ Router::scope('/', function (RouteBuilder $routes) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
+    $routes->fallbacks(DashedRoute::class);
+});
+
+Router::scope('/produtos', function (RouteBuilder $routes) {
+    $routes->connect('/', ['controller' => 'products', 'action'=>'index']);
+    $routes->connect('/:action/*', ['controller' => 'products']);
+    $routes->connect('/adicionar', ['controller' => 'products', 'action'=>'add']);
     $routes->fallbacks(DashedRoute::class);
 });
