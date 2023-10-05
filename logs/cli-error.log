@@ -1,0 +1,20 @@
+2023-10-05 14:32:02 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aula_cakephp.grupo' doesn't exist in C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grupo', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grupo', Array)
+#2 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('grupo')
+#3 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'grupo', 'Grupo')
+#7 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('Grupo')
+#8 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\bake\src\Shell\BakeShell.php(273): Bake\Shell\Task\ModelTask->main('Grupo')
+#9 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Grupo', 0)
+#10 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\bake\src\Shell\BakeShell.php(274): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('Grupo')
+#12 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Users\Administrador\Documents\Manuela\aulacakephp\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
