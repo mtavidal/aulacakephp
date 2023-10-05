@@ -197,3 +197,26 @@ Type::build('timestamp')
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
+
+Log::setConfig('Orders', [
+    'className' => 'File',
+    'path' => LOGS,
+    'file' => 'orders.log',
+    // 'url' => env('LOG_DEBUG_URL', null),
+    'scopes' => ['orders'],
+    'levels' => [],
+]);
+
+Log::setConfig('User',function(){
+    $file = new \Cake\Log\Engine\Filelog([
+        'className' => 'File',
+        'path' => LOGS,
+        'file' => 'user.log',
+        // 'url' => env('LOG_DEBUG_URL', null),
+        'scopes' => ['user'],
+        'levels' => [],
+    ]);
+    //mandar email
+    return $file;
+}
+);

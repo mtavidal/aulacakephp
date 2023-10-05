@@ -45,6 +45,11 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
+        $this->loadComponent('Cookie');
+        $this->Cookie->configKey('APP', [
+            'path' => '/',
+            'expires' => '+ 1 day'
+        ]);
         $this->loadComponent('Auth', [
             'authenticate' => [
                 'Form' => [

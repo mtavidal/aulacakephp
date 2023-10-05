@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Log\Log;
 
 /**
  * User Controller
@@ -20,6 +21,18 @@ class UserController extends AppController
      */
     public function index()
     {
+        //cookies
+        // $this->Cookie->write('APP.msg', 'Olá Mundo!');
+        // $cookie = $this->Cookie->read('APP');
+        // debug($cookie['msg']);
+
+
+        //session
+        // $session = $this->request->getSession();
+        // //new \cake\http\session();
+        // debug($session->read('Auth.User.email'));
+        // exit();
+
         $user = $this->paginate($this->User);
 
         $this->set(compact('user'));
@@ -107,6 +120,11 @@ class UserController extends AppController
     }
     public function login()
     {
+        // Log::emergency('Ocorreu um grave erro');
+        // Log::warning('Orders warning','orders');
+        // $this->log('Log em user.log', 'error', 'user');
+
+        // $this->log('log normal','debug');
         if($this->request->is('post')){
             $dados = $this->request->getData();
             $user = $this->User->find('all')
