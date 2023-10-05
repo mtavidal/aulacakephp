@@ -34,6 +34,14 @@ class ProductsTable extends Table
         $this->setTable('products');
         $this->setDisplayField('ProductID');
         $this->setPrimaryKey('ProductID');
+        $this->belongsTo('suppliers', [
+            'joinType' => 'INNER',
+            'foreignKey' => 'SupplierID'
+        ]);
+        $this->belongsTo('categories', [
+            'joinType' => 'INNER',
+            'foreignKey' => 'CategoryID'
+        ]);
     }
 
     /**
@@ -63,13 +71,39 @@ class ProductsTable extends Table
 
         $validator
             ->scalar('Unit')
-            ->maxLength('Unit', 255)
-            ->allowEmpty('Unit');
+            ->maxLength('Unit', 255);
 
         $validator
             ->decimal('Price')
+            ->greaterThan('Price', 0, 'Preço tem que ser maior que 0')
             ->allowEmpty('Price');
 
         return $validator;
     }
+      /**
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        parent::buildRules($rules);
+        $rules->add($rules->isUnique(['ProductID'], 'ProductID já existe.'));
+        $rules->add($rules->existsIn('SupplierID', 'suppliers', 'SupplierID não está na lista.'));
+        $rules->add($rules->existsIn('CategoryID', 'categories', 'CategoryID não está na lista.'));
+
+        $rules->add(function(\App\Model\Entity\Product $entity){
+            return !$entity->isDirty('Unit');
+        }, 'verifica_produto', [
+            'errorField' => 'Unit', 
+            'message' => 'Campo Unit deve alterado'
+        ]);
+
+        return $rules;
+    }
+    // public function beforeSave(\Cake\Event\Event $event, \App\Model\Entity\User $entity)
+    // {
+    //     debug($entity);
+    //     exit();
+
+    // }
 }
