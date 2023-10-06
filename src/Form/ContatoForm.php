@@ -18,6 +18,9 @@ class ContatoForm extends Form
      */
     protected function _buildSchema(Schema $schema)
     {
+        $schema->addField('email', 'string');
+        $schema->addField('assunto', 'string');
+        $schema->addField('body', 'text');
         return $schema;
     }
 
@@ -29,6 +32,18 @@ class ContatoForm extends Form
      */
     protected function _buildValidator(Validator $validator)
     {
+        $validator->email('email', 'Deve ser fornecido um email válido')
+            ->maxLength('email', 255)
+            ->requirePresence('email','Campo email necessário');
+
+        $validator->scalar('assunto')
+            ->maxLength('assunto', 255)
+            ->notEmpty('assunto', 'Campo assunto necessário');
+
+        $validator->scalar('body')
+            ->minLength('body', 10)
+            ->notEmpty('body', 'Campo mensagem necessário');
+
         return $validator;
     }
 
@@ -40,6 +55,7 @@ class ContatoForm extends Form
      */
     protected function _execute(array $data)
     {
+        //salvar no banco ou enviar email
         return true;
     }
 }

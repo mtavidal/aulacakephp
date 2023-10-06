@@ -127,3 +127,81 @@ Stack Trace:
 #2 {main}
 
 
+2023-10-06 11:46:18 Error: [PDOException] SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+Request URL: /login?redirect=%2Fcontato
+Referer URL: http://localhost:8765/login?redirect=%2Fcontato
+Stack Trace:
+#0 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(547): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Query.php(271): Cake\ORM\Table->getSchema()
+#9 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UserTable))
+#10 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(1758): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UserTable))
+#11 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(1350): Cake\ORM\Table->query()
+#12 C:\Users\Administrador\Documents\Manuela\aulacakephp\src\Controller\UserController.php(130): Cake\ORM\Table->find('all')
+#13 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\UserController->login()
+#14 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#15 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UserController))
+#16 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Users\Administrador\Documents\Manuela\aulacakephp\webroot\index.php(40): Cake\Http\Server->run()
+#31 {main}
+
+
+2023-10-06 11:46:22 Error: [PDOException] SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+Request URL: /login?redirect=%2Fcontato
+Referer URL: http://localhost:8765/login?redirect=%2Fcontato
+Stack Trace:
+#0 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(547): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Query.php(271): Cake\ORM\Table->getSchema()
+#9 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UserTable))
+#10 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(1758): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UserTable))
+#11 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\ORM\Table.php(1350): Cake\ORM\Table->query()
+#12 C:\Users\Administrador\Documents\Manuela\aulacakephp\src\Controller\UserController.php(130): Cake\ORM\Table->find('all')
+#13 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\UserController->login()
+#14 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#15 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UserController))
+#16 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Users\Administrador\Documents\Manuela\aulacakephp\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Users\Administrador\Documents\Manuela\aulacakephp\webroot\index.php(40): Cake\Http\Server->run()
+#31 {main}
+
+
